@@ -7,7 +7,7 @@ function StorePage() {
     const [query, setQuery] = useState("");
 
     return (
-        <main className="max-w-[800px] p-5 flex flex-col gap-5">
+        <main className="max-w-[800px] p-5 flex flex-col  gap-5">
             <SearchBar query={query} setQuery={setQuery} />
             <ProductGrid query={query} />
         </main>

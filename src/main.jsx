@@ -9,6 +9,7 @@ createRoot(document.getElementById("root")).render(
     <StrictMode>
         <BrowserRouter>
             <Routes>
+                {/* Add route with layout */}
                 <Route path="/" element={<Layout />}>
                     <Route index element={<StorePage />} />
                 </Route>

@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import ProductCard from "../components/ProductCard";
+import { fetchProducts } from "../services/products";
 
 function ProductGrid({ query }) {
     // Store products state
@@ -9,13 +10,7 @@ function ProductGrid({ query }) {
 
     // Fetch data from API
     useEffect(() => {
-        fetch("https://fakestoreapi.com/products/")
-            .then((res) => {
-                if (!res.ok) {
-                    throw new Error("Network response was not ok");
-                }
-                return res.json();
-            })
+        fetchProducts()
             .then((data) => {
                 setProducts(data);
                 setLoading(false);
@@ -26,37 +21,34 @@ function ProductGrid({ query }) {
             });
     }, []);
 
+    // checks if query matches with product, then filters
     const filtered = products.filter((p) =>
         p.title.toLowerCase().includes(query.toLowerCase()),
     );
 
+    // loading state
     if (loading) {
         return (
             <div className="py-20 text-center text-xl md:text-4xl font-semibold">
                 Loading products...
             </div>
         );
-    } else if (error) {
+    }
+    // error state
+    else if (error) {
         return (
             <div className="py-20 text-center text-xl md:text-4xl font-semibold">
                 Error: {error}
             </div>
         );
-    } else {
+    }
+    // successful render
+    else {
         return (
             <section className="grid grid-cols-2 md:grid-cols-3 gap-2 md:gap-3">
+                {/* Display filtered products */}
                 {filtered.length > 0 ? (
-                    filtered.map((product) => (
-                        <ProductCard
-                            key={product.id}
-                            image={product.image}
-                            title={product.title}
-                            price={product.price}
-                            category={product.category}
-                            rating={product.rating.rate}
-                            count={product.rating.count}
-                        />
-                    ))
+                    filtered.map((product) => <ProductCard product={product} />)
                 ) : (
                     <div className="col-span-full text-center text-gray-400">
                         No products found

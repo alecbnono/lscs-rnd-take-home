@@ -1,12 +1,68 @@
-# React + Vite
+# NovaMart — E-Commerce Storefront
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple e-commerce website built with **React** and **TailwindCSS**.  
+Products are displayed in a card-style layout similar to Shopee, and data is fetched from the [FakeStore API](https://fakestoreapi.com/).
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Features
 
-## Expanding the ESLint configuration
+- Product listing with image, title, price, category, and rating ⭐
+- Search bar for filtering products by name
+- Responsive design (mobile and desktop navbar)
+- Basic layout with Navbar and Store page
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🛠️ Tech Stack
+
+- **React** (with React Router for routing)
+- **TailwindCSS** for styling
+- **FakeStore API** for product data
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js (v18 or above recommended)
+- npm or yarn
+
+### Installation
+
+Clone the repository and install dependencies:
+
+```bash
+git clone git@github.com:alecbnono/lscs-rnd-take-home.git
+cd project-name
+npm install
+```
+
+### Run Development Server
+
+```bash
+npm run dev
+```
+
+The app will be available at:
+`http://localhost:5173/` (default for Vite)
+
+## 📂 Project Structure
+
+```plaintext
+src/
+  components/       # Navbar, Footer, ProductCard, etc.
+  layout/           # Layout wrapper (Navbar + Footer + Outlet)
+  pages/            # StorePage (main product listing)
+  styles.css        # Tailwind entry file
+  main.jsx          # React entry point
+```
+
+## 🔍 Usage
+
+- Navigate to the homepage (`/`) to view all products.
+- Use the search bar at the top to filter products by name.
+- Clear the search bar to show all products again.
+- On mobile, open the hamburger menu for navigation.
+- On desktop, the navigation links are displayed in the top bar.
