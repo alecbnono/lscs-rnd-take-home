@@ -3,8 +3,6 @@
 A simple e-commerce website built with **React** and **TailwindCSS**.  
 Products are displayed in a card-style layout similar to Shopee, and data is fetched from the [FakeStore API](https://fakestoreapi.com/).
 
----
-
 ## ✨ Features
 
 - Product listing with image, title, price, category, and rating ⭐
@@ -12,15 +10,11 @@ Products are displayed in a card-style layout similar to Shopee, and data is fet
 - Responsive design (mobile and desktop navbar)
 - Basic layout with Navbar and Store page
 
----
-
 ## 🛠️ Tech Stack
 
 - **React** (with React Router for routing)
 - **TailwindCSS** for styling
 - **FakeStore API** for product data
-
----
 
 ## 🚀 Getting Started
 
