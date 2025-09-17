@@ -55,6 +55,7 @@ src/
   components/       # Navbar, Footer, ProductCard, etc.
   layout/           # Layout wrapper (Navbar + Footer + Outlet)
   pages/            # StorePage (main product listing)
+  services/         # API calls
   styles.css        # Tailwind entry file
   main.jsx          # React entry point
 ```
