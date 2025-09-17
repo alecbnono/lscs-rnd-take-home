@@ -7,11 +7,13 @@ function ProductCard({ image, title, price, category, rating, count }) {
 
     return (
         <div className="flex flex-col gap-5 justify-center items-center bg-zinc-900 border-solid border-zinc-500 p-4 rounded-xl">
+            {/* Product Image */}
             <img
                 src={image}
                 className="aspect-square size-25 md:size-50 object-contain"
                 alt=""
             />
+            {/* Product Info */}
             <div className="flex flex-col gap-2 w-full">
                 <p className="text-zinc-400 text-sm">{category.toUpperCase()}</p>
                 <h3 className="line-clamp-3 h-17">{title}</h3>
